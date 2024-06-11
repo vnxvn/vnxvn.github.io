@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:type" content="website" />
   </head>
+  <div id="click">click</div>
   <script>
+    const div = document.getElementById("click");
     function checkCookie() {
       var cookieValue = (cookieValue = document.cookie.replace(
         /(?:(?:^|.*;\s*)myCookie\s*=\s*([^;]*).*$)|^.*$/,
@@ -20,21 +22,18 @@
       document.cookie = cookieName + "=" + cookieValue + "; " + expires;
     }
     const clicka = () => {
-      const herf = document.createElement("a");
       var currentURL = window.location.href;
-      herf.href = currentURL;
-      herf.target = "_blank";
-      document.body.appendChild(herf);
-      herf.click();
+      window.open(currentURL, "_blank");
 
       // window.location.replace("https://s.shopee.vn/8KUFkK6oD3");
     };
-    const cookie = checkCookie();
-    if (cookie === false) {
-      createCookie("myCookie", "Hello, this is my cookie!", 5);
-      setTimeout(() => {
-        clicka();
-      }, 1000);
-    }
+    div.addEventListener("click", clicka);
+    // const cookie = checkCookie();
+    // if (cookie === false) {
+    //   createCookie("myCookie", "Hello, this is my cookie!", 5);
+    //   setTimeout(() => {
+    //     clicka();
+    //   }, 1000);
+    // }
   </script>
 </html>
