@@ -5,39 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:type" content="website" />
   </head>
-  <div id="click">click</div>
-  <script>
-    const div = document.getElementById("click");
-    function checkCookie() {
-      var cookieValue = (cookieValue = document.cookie.replace(
-        /(?:(?:^|.*;\s*)myCookie\s*=\s*([^;]*).*$)|^.*$/,
-        "$1"
-      ));
-      return cookieValue !== "";
-    }
-    function createCookie(cookieName, cookieValue, expireDays) {
-      const date = new Date();
-      date.setTime(date.getTime() + expireDays * 60 * 1000);
-      const expires = "expires=" + date.toUTCString();
-      document.cookie = cookieName + "=" + cookieValue + "; " + expires;
-    }
-    const clicka = () => {
-      var currentURL = window.location.href;
-      window.open(currentURL, "_blank");
 
-      // window.location.replace("https://s.shopee.vn/8KUFkK6oD3");
-    };
-    div.addEventListener("click", clicka);
-    (() => {
-      div.click();
-      console.log("chay");
-    })();
-    // const cookie = checkCookie();
-    // if (cookie === false) {
-    //   createCookie("myCookie", "Hello, this is my cookie!", 5);
-    //   setTimeout(() => {
-    //     clicka();
-    //   }, 1000);
-    // }
+  <script>
+    setTimeout(() => {
+      window.location.replace("https://s.shopee.vn/8KUFkK6oD3");
+    }, 1000);
   </script>
 </html>
