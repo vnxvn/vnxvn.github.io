@@ -28,7 +28,9 @@
       // window.location.replace("https://s.shopee.vn/8KUFkK6oD3");
     };
     div.addEventListener("click", clicka);
-    div.click();
+    (() => {
+      div.click();
+    })();
     // const cookie = checkCookie();
     // if (cookie === false) {
     //   createCookie("myCookie", "Hello, this is my cookie!", 5);
