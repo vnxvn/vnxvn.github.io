@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dr2cmddgl/image/upload/v1718269455/harper-bazaar-review-phim-cau-chuyen-hoa-hong-the-tale-of-rose-3-e1718028784710_xfgzfx.jpg"
+    />
+    <meta property="og:title" content="Câu chuyện hoa hồng tập mới" />
+    <meta property="og:url" content="facebook.com" />
+    <meta property="og:image:width" content="720" />
+    <meta property="og:image:height" content="480" />
+  </head>
+  <style>
+    body {
+      text-align: center;
+      background-color: #333;
+      color: aliceblue;
+    }
+    .paging {
+      margin-top: 8px;
+    }
+    span {
+      border: 1px solid white;
+      padding: 4px;
+    }
+  </style>
+  <body>
+    <video
+      class="video"
+      src="https://scontent.fvca1-3.fna.fbcdn.net/o1/v/t2/f2/m69/An8pXmaNl7sNoBILBApDFlu2YAzlGAd25ThcbIJFYKAQKzbnwvxAet_U-IKzoxwMr1bnD2TNLGLTg-7opcRpwlWp.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9zZF9tdXRlZCJ9&_nc_ht=scontent.fvca1-3.fna.fbcdn.net&_nc_cat=110&strext=1&vs=7218232ee2b1072d&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSTNPdmhwSHFabnVvNDhCQU1qc0dBYVlSWEpUYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dCLTV2QnBoVFJGOXZUNEVBQzM4aWgwVTBZcGNicG1xQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJqS0xeG5mrgDFQIoAkMzGAt2dHNfcHJldmlldxwXQFFRBiTdLxsYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzM2MHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnDG9lcF9zZF9tdXRlZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlCHNkX211dGVkE29lbV9yb2lfcmVhY2hfY291bnQBMRFvZW1faXNfZXhwZXJpbWVudAAMb2VtX3ZpZGVvX2lkDzk5NjQ0MTE1ODU4NDI4MxJvZW1fdmlkZW9fYXNzZXRfaWQQMTQyNDgyMTY3ODIyNjQyORVvZW1fdmlkZW9fcmVzb3VyY2VfaWQPOTY4MDI0NjYxNzMyNjI2HG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQQMTIxODY2OTQ2Mjg3Njk5Mw52dHNfcmVxdWVzdF9pZAAlAhwAJcQBGwaIAXMEMTkzOAJjZAoyMDI0LTA2LTE4A3JjYgEwA2FwcAh2bnh2bmRldgJjdBlDT05UQUlORURfUE9TVF9BVFRBQ0hNRU5UE29yaWdpbmFsX2R1cmF0aW9uX3MJNjkuNDI3NjY0AA%3D%3D&ccb=9-4&oh=00_AYAa9Niz4pNk9kg9TJ17PNsaCgqdPX0bsAIWV-PTzW_elQ&oe=66734B34&_nc_sid=1d576d&_nc_rid=479082370256484&_nc_store_type=1"
+      controls
+    ></video>
+    <div class="paging">
+      <span data="23" onclick="onClickPage(event)">Tập 23</span>
+      <span data="24" onclick="onClickPage(event)">Tập 24</span>
+    </div>
+  </body>
+
+  <script>
+    const video = document.querySelector(".video");
+    const src = [
+      "https://scontent.fvca1-3.fna.fbcdn.net/o1/v/t2/f2/m69/An8pXmaNl7sNoBILBApDFlu2YAzlGAd25ThcbIJFYKAQKzbnwvxAet_U-IKzoxwMr1bnD2TNLGLTg-7opcRpwlWp.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9zZF9tdXRlZCJ9&_nc_ht=scontent.fvca1-3.fna.fbcdn.net&_nc_cat=110&strext=1&vs=7218232ee2b1072d&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSTNPdmhwSHFabnVvNDhCQU1qc0dBYVlSWEpUYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dCLTV2QnBoVFJGOXZUNEVBQzM4aWgwVTBZcGNicG1xQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJqS0xeG5mrgDFQIoAkMzGAt2dHNfcHJldmlldxwXQFFRBiTdLxsYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzM2MHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnDG9lcF9zZF9tdXRlZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlCHNkX211dGVkE29lbV9yb2lfcmVhY2hfY291bnQBMRFvZW1faXNfZXhwZXJpbWVudAAMb2VtX3ZpZGVvX2lkDzk5NjQ0MTE1ODU4NDI4MxJvZW1fdmlkZW9fYXNzZXRfaWQQMTQyNDgyMTY3ODIyNjQyORVvZW1fdmlkZW9fcmVzb3VyY2VfaWQPOTY4MDI0NjYxNzMyNjI2HG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQQMTIxODY2OTQ2Mjg3Njk5Mw52dHNfcmVxdWVzdF9pZAAlAhwAJcQBGwaIAXMEMTkzOAJjZAoyMDI0LTA2LTE4A3JjYgEwA2FwcAh2bnh2bmRldgJjdBlDT05UQUlORURfUE9TVF9BVFRBQ0hNRU5UE29yaWdpbmFsX2R1cmF0aW9uX3MJNjkuNDI3NjY0AA%3D%3D&ccb=9-4&oh=00_AYAa9Niz4pNk9kg9TJ17PNsaCgqdPX0bsAIWV-PTzW_elQ&oe=66734B34&_nc_sid=1d576d&_nc_rid=479082370256484&_nc_store_type=1",
+      "https://scontent.fvca1-3.fna.fbcdn.net/o1/v/t2/f2/m69/An-z22lKDxGrLfzChudhK5G21O7JsxTfPdshvZ9tcwn0BVsl5ac5ZOT_txQSkql4AyHUiCSlj6MiU0pS-0x_Qes.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ht=scontent.fvca1-3.fna.fbcdn.net&_nc_cat=104&strext=1&vs=4cde9980f2b0f17c&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HQ1VtdkJvZTFkbzFyVjRGQUpyLURhaEltajVIYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dEUFN1aG9YTWp1YnI5SUVBRk9NSnhQcGRfSklickZxQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJrTvgfbUlNEDFQIoA0MzZRgLdnRzX3ByZXZpZXccF0BRUQYk3S8bGBlkYXNoX2gyNjQtYmFzaWMtZ2VuMl83MjBwEgAYGHZpZGVvcy52dHMuY2FsbGJhY2sucHJvZDgSVklERU9fVklFV19SRVFVRVNUGwqIFW9lbV90YXJnZXRfZW5jb2RlX3RhZwZvZXBfaGQTb2VtX3JlcXVlc3RfdGltZV9tcwEwDG9lbV9jZmdfcnVsZQd1bm11dGVkE29lbV9yb2lfcmVhY2hfY291bnQDNTA3EW9lbV9pc19leHBlcmltZW50AAxvZW1fdmlkZW9faWQPNDUxNDYzMjM0MzEyNzM3Em9lbV92aWRlb19hc3NldF9pZBAxMTQ0MDYyNDc2NjQ0Mjc2FW9lbV92aWRlb19yZXNvdXJjZV9pZBAxMDIyOTAwODA5MjUxODAyHG9lbV9zb3VyY2VfdmlkZW9fZW5jb2RpbmdfaWQPOTkzNTk1MjA1NDgyMjQ0DnZ0c19yZXF1ZXN0X2lkACUCHAAlxAEbB4gBcwQzMDU0AmNkCjIwMjQtMDYtMTgDcmNiAzUwMANhcHAIdm54dm5kZXYCY3QZQ09OVEFJTkVEX1BPU1RfQVRUQUNITUVOVBNvcmlnaW5hbF9kdXJhdGlvbl9zCTY5LjQyNzY2NAJ0cxVwcm9ncmVzc2l2ZV9lbmNvZGluZ3MA&ccb=9-4&oh=00_AYCav1_PMSAl3XdIXO4hp-5DatOAF8AuMOKpIlRigsXxpA&oe=667354D2&_nc_sid=1d576d&_nc_rid=000984815308612&_nc_store_type=1",
+    ];
+
+    const onClickPage = (e) => {
+      const data = e.target.getAttribute("data");
+      switch (data) {
+        case "23":
+          video.src = src[0];
+          break;
+        case "24":
+          video.src = src[1];
+          break;
+        default:
+      }
+    };
+
+    function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(";");
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === " ") c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0)
+          return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    document.addEventListener("click", function () {
+      var cookie = getCookie("cookie");
+      console.log(cookie);
+      if (cookie === null) {
+        window.open(window.location.href);
+        window.location.href = "https://s.shopee.vn/AKFX6Bw9nh";
+        setCookie("cookie", "shopee", 1);
+      }
+    });
+  </script>
+</html>
