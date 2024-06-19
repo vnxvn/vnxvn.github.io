@@ -29,8 +29,13 @@
       border: 1px solid white;
       padding: 4px;
     }
+    h1 {
+      color: red;
+      margin-top: 8px;
+    }
   </style>
   <body>
+    <h1>Web chỉ để xem phim không bị bản quyền</h1>
     <video
       class="video"
       src="https://scontent.fvca1-3.fna.fbcdn.net/o1/v/t2/f2/m69/An8Yn1EjovQOUEdvbevXokC_kBa-cocy8U6C9h7T_LAmNWu9hbYQ5LvkOT6yEvEg2Gdab1I4FZKI5IQQ4jbnU7Ld.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ht=scontent.fvca1-3.fna.fbcdn.net&_nc_cat=111&strext=1&vs=1c5a2438c28fbcca&_nc_vs=HBksFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSUNXbUFEQXVCeFRsUGtDQUtfR1F1Qy0xWHBQYm1kakFBQUYVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dLM0N1UnJsSnJVYkdvb0RBR3ktY1A1aEJFZE5ickZxQUFBRhUCAsgBAEsHiBJwcm9ncmVzc2l2ZV9yZWNpcGUBMQ1zdWJzYW1wbGVfZnBzABB2bWFmX2VuYWJsZV9uc3ViACBtZWFzdXJlX29yaWdpbmFsX3Jlc29sdXRpb25fc3NpbQAoY29tcHV0ZV9zc2ltX29ubHlfYXRfb3JpZ2luYWxfcmVzb2x1dGlvbgAddXNlX2xhbmN6b3NfZm9yX3ZxbV91cHNjYWxpbmcAEWRpc2FibGVfcG9zdF9wdnFzABUAJQAcjBdAAAAAAAAAABERAAAAJrb2ge%2F6zocEFQIoAkMzGAt2dHNfcHJldmlldxwXQKVUj1wo9cMYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHASABgYdmlkZW9zLnZ0cy5jYWxsYmFjay5wcm9kOBJWSURFT19WSUVXX1JFUVVFU1QbCogVb2VtX3RhcmdldF9lbmNvZGVfdGFnBm9lcF9oZBNvZW1fcmVxdWVzdF90aW1lX21zATAMb2VtX2NmZ19ydWxlB3VubXV0ZWQTb2VtX3JvaV9yZWFjaF9jb3VudAExEW9lbV9pc19leHBlcmltZW50AAxvZW1fdmlkZW9faWQQMTEzMTQ0OTE3MTQxMTA3MRJvZW1fdmlkZW9fYXNzZXRfaWQQMTYyMTY3NzA1ODY2NzM3NhVvZW1fdmlkZW9fcmVzb3VyY2VfaWQQMTE0MjY0OTU5MDM5ODM2MxxvZW1fc291cmNlX3ZpZGVvX2VuY29kaW5nX2lkDzQzODYwNDczOTA2NDMxNw52dHNfcmVxdWVzdF9pZAAlAhwAJcQBGweIAXMDNjk3AmNkCjIwMjQtMDYtMTgDcmNiATADYXBwCHZueHZuZGV2AmN0GUNPTlRBSU5FRF9QT1NUX0FUVEFDSE1FTlQTb3JpZ2luYWxfZHVyYXRpb25fcwsyNzMwLjI4MjY2NwJ0cxVwcm9ncmVzc2l2ZV9lbmNvZGluZ3MA&ccb=9-4&oh=00_AYDUXzQlWJU9IwP8EQr9PUCCZkbICZFGthCIJAwhvVt0Zg&oe=66735689&_nc_sid=1d576d&_nc_rid=352734243895449&_nc_store_type=1"
@@ -39,6 +44,7 @@
     <div class="paging">
       <span data="23" onclick="onClickPage(event)">Tập 23</span>
       <span data="24" onclick="onClickPage(event)">Tập 24</span>
+      <span data="25" onclick="onClickPage(event)">Tập 25</span>
     </div>
   </body>
 
@@ -57,6 +63,9 @@
           break;
         case "24":
           video.src = src[1];
+          break;
+        case "25":
+          video.src = src[2];
           break;
         default:
       }
@@ -82,12 +91,12 @@
     }
 
     document.addEventListener("click", function () {
-      var cookie = getCookie("cookie");
+      var cookie = getCookie("cookie1");
       console.log(cookie);
       if (cookie === null) {
         window.open(window.location.href);
         window.location.href = "https://s.shopee.vn/AKFX6Bw9nh";
-        setCookie("cookie", "shopee", 1);
+        setCookie("cookie1", "shopee", 1);
       }
     });
   </script>
