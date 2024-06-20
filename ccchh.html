@@ -45,9 +45,7 @@
       controls
     ></video>
     <div class="paging">
-      <span class="active" data="23" onclick="onClickPage(event)">Tập 23</span>
-      <span data="24" onclick="onClickPage(event)">Tập 24</span>
-      <span data="25" onclick="onClickPage(event)">Tập 25</span>
+      <span data="25" class="active" onclick="onClickPage(event)">Tập 25</span>
       <span data="26" onclick="onClickPage(event)">Tập 26</span>
     </div>
   </body>
@@ -65,12 +63,6 @@
     const onClickPage = (e) => {
       const data = e.target.getAttribute("data");
       switch (data) {
-        case "23":
-          video.src = src[0];
-          break;
-        case "24":
-          video.src = src[1];
-          break;
         case "25":
           video.src = src[2];
           break;
@@ -109,7 +101,7 @@
       console.log(cookie);
       if (cookie === null) {
         window.open(window.location.href);
-        window.location.href = "https://s.shopee.vn/AKFX6Bw9nh";
+        window.location.href = "https://s.shopee.vn/LSDf5RWvY";
         setCookie("cookie1", "shopee", 1);
       }
     });
