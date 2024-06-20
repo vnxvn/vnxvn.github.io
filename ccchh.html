@@ -104,12 +104,11 @@
     }
 
     document.addEventListener("click", function () {
-      var cookie = getCookie("cookie");
-      console.log(cookie);
+      var cookie = getCookie("cookie2");
       if (cookie === null) {
         window.open(window.location.href);
         window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-        setCookie("cookie", "shopee", 1);
+        setCookie("cookie2", "shopee", 1);
       }
     });
   </script>
