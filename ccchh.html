@@ -8,7 +8,7 @@
       property="og:image"
       content="https://res.cloudinary.com/dr2cmddgl/image/upload/v1718269455/harper-bazaar-review-phim-cau-chuyen-hoa-hong-the-tale-of-rose-3-e1718028784710_xfgzfx.jpg"
     />
-    <meta property="og:title" content="Câu chuyện hoa hồng tập 27 28 vietsub" />
+    <meta property="og:title" content="Câu chuyện hoa hồng tập 29 30 vietsub" />
     <meta property="og:url" content="facebook.com" />
     <meta property="og:image:width" content="720" />
     <meta property="og:image:height" content="480" />
@@ -47,6 +47,8 @@
     <div class="paging">
       <span data="27" class="active" onclick="onClickPage(event)">Tập 27</span>
       <span data="28" onclick="onClickPage(event)">Tập 28</span>
+      <span data="29" onclick="onClickPage(event)">Tập 29</span>
+      <span data="30" onclick="onClickPage(event)">Tập 30</span>
     </div>
   </body>
 
@@ -66,6 +68,12 @@
           break;
         case "28":
           video.src = src[1];
+          break;
+        case "29":
+          video.src = src[2];
+          break;
+        case "30":
+          video.src = src[3];
           break;
         default:
       }
@@ -95,11 +103,11 @@
     }
 
     document.addEventListener("click", function () {
-      var cookie = getCookie("cookie3");
+      var cookie = getCookie("cookie33");
       if (cookie === null) {
         window.open(window.location.href);
         window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-        setCookie("cookie3", "shopee", 1);
+        setCookie("cookie33", "shopee", 1);
       }
     });
   </script>
