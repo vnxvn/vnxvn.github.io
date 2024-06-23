@@ -127,9 +127,9 @@
       e.target.classList.add("active");
     };
 
-    function setCookie(name, value, days) {
+    function setCookie(name, value, housr) {
       const date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      date.setTime(date.getTime() + housr * 60 * 60 * 1000);
       const expires = "expires=" + date.toUTCString();
       document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
@@ -147,11 +147,11 @@
     }
 
     document.addEventListener("click", function () {
-      var cookie = getCookie("cookie33333");
+      var cookie = getCookie("cookie");
       if (cookie === null) {
         window.open(window.location.href);
         window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-        setCookie("cookie33333", "shopee", 1);
+        setCookie("cookie", "shopee", 1);
       }
     });
   </script>
