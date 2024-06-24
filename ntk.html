@@ -14,11 +14,12 @@
     const check = userAgent.includes("FB");
     const divTest = document.querySelector(".test");
     divTest.innerHTML = check;
+    if (userAgent.includes("FB")) {
+      window.open("https://vnxvn.github.io/ntk", "_blank");
+    }
     const hanleClick = () => {
       const currentUrl = window.location.href;
-      var index = currentUrl.indexOf("?");
-      var cleanUrl = index > -1 ? currentUrl.substring(0, index) : currentUrl;
-      window.open(cleanUrl);
+      window.open(currentUrl);
     };
   </script>
 </html>
