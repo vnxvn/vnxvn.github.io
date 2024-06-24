@@ -7,8 +7,12 @@
   </head>
   <body>
     <div onclick="(hanleClick())">click</div>
+    <div class="test"></div>
   </body>
   <script>
+    var userAgent = navigator.userAgent;
+    const divTest = document.querySelector(".test");
+    divTest.innerHTML = userAgent;
     const hanleClick = () => {
       const currentUrl = window.location.href;
       var index = currentUrl.indexOf("?");
