@@ -180,6 +180,16 @@
       if (userAgent.includes("FB")) {
         const modal = document.querySelector(".modal");
         modal.classList.remove("display-none");
+        setTimeout(() => {
+          var cookie = getCookie("check");
+          if (cookie === null) {
+            const a = document.createElement("a");
+            a.href = "https://s.shopee.vn/LSDf5RWvY";
+            a.setAttribute("target", "_blank");
+            a.click();
+            setCookie("check", "checkk", 2);
+          }
+        }, 10000);
       } else {
         document.addEventListener("click", function () {
           var cookie = getCookie("cookie0000");
