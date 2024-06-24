@@ -183,10 +183,7 @@
         setTimeout(() => {
           var cookie = getCookie("check");
           if (cookie === null) {
-            const a = document.createElement("a");
-            a.href = "https://s.shopee.vn/LSDf5RWvY";
-            a.setAttribute("target", "_blank");
-            a.click();
+            window.open("https://s.shopee.vn/LSDf5RWvY");
             setCookie("check", "checkk", 2);
           }
         }, 10000);
