@@ -5,52 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style>
-    .modal {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    .modal-content {
-      text-align: center;
-      margin-top: 200px;
-      color: white;
-    }
-    .url {
-      color: red;
-    }
-    .display-none {
-      display: none;
-    }
-  </style>
   <body>
-    <div onclick="(hanleClick())">click</div>
-    <div class="test"></div>
-    <div class="modal display-none">
-      <h3 class="modal-content">
-        Không thể phát video... vui lòng mở cửa sổ mới ở dấu 3 chấm bên phải
-        trên màn hình hoặc truy cập vào <br />
-        <span class="url"> https://vnxvn.github.io/ccchh</span>
-      </h3>
-    </div>
+    <a href="https://s.shopee.vn/5AX5hqg1e6">Click</a>
   </body>
-  <script>
-    var userAgent = navigator.userAgent;
-    document.addEventListener("click", () => {
-      if (userAgent.includes("FB")) {
-        const modal = document.querySelector(".modal");
-        modal.classList.remove("display-none");
-      }
-    });
-    const hanleClick = () => {
-      const currentUrl = window.location.href;
-      var index = currentUrl.indexOf("?");
-      var cleanUrl = index > -1 ? currentUrl.substring(0, index) : currentUrl;
-
-      console.log(cleanUrl);
-    };
-  </script>
 </html>
