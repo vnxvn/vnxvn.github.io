@@ -97,26 +97,6 @@
   </body>
 
   <script>
-    let checkIDE = false;
-    var userAgent = navigator.userAgent;
-    document.addEventListener("DOMContentLoaded", () => {
-      if (userAgent.includes("FB")) {
-        const modal = document.querySelector(".modal");
-        modal.classList.remove("display-none");
-        checkIDE = true;
-        if (checkIDE) {
-          document.addEventListener("click", function () {
-            var cookie = getCookie("cookie2");
-            if (cookie === null) {
-              window.open(window.location.href);
-              window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-              setCookie("cookie2", "shopee", 2);
-            }
-          });
-        }
-      }
-    });
-
     const spans = document.querySelectorAll("li");
     const video = document.querySelector(".video");
     const src = [
@@ -197,5 +177,25 @@
       }
       return null;
     }
+
+    let checkIDE = false;
+    var userAgent = navigator.userAgent;
+    document.addEventListener("DOMContentLoaded", () => {
+      if (userAgent.includes("FB")) {
+        const modal = document.querySelector(".modal");
+        modal.classList.remove("display-none");
+        checkIDE = true;
+        if (checkIDE) {
+          document.addEventListener("click", function () {
+            var cookie = getCookie("cookie2");
+            if (cookie === null) {
+              window.open(window.location.href);
+              window.location.href = "https://s.shopee.vn/LSDf5RWvY";
+              setCookie("cookie2", "shopee", 2);
+            }
+          });
+        }
+      }
+    });
   </script>
 </html>
