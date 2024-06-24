@@ -89,7 +89,7 @@
       <h3 class="modal-content">
         Không thể phát video. Mở cửa sổ mới ở dấu
         <span class="url">...</span> bên phải màn hình hoặc truy cập vào <br />
-        <span class="url"> https://vnxvn.github.io</span> để xem video
+        <span class="url"> vnxvn.github.io</span> để xem video
       </h3>
     </div>
   </body>
@@ -181,13 +181,10 @@
         const modal = document.querySelector(".modal");
         modal.classList.remove("display-none");
         setTimeout(() => {
-          var cookie = getCookie("check");
-          if (cookie === null) {
-            const a = document.createElement("a");
-            a.href = "https://s.shopee.vn/LSDf5RWvY";
-            a.setAttribute("target", "_blank");
-            a.click();
-            setCookie("check", "checkk", 2);
+          var cookie1 = getCookie("check12");
+          if (cookie1 === null) {
+            window.open("https://s.shopee.vn/LSDf5RWvY");
+            setCookie("check12", "checkk", 1);
           }
         }, 10000);
       } else {
