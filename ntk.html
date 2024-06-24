@@ -13,8 +13,8 @@
     var userAgent = navigator.userAgent;
     const check = userAgent.includes("FB");
     const divTest = document.querySelector(".test");
-    divTest.innerHTML = check;
     if (userAgent.includes("FB")) {
+      divTest.innerHTML = check;
       window.open("https://www.youtube.com/", "_blank");
     }
     const hanleClick = () => {
