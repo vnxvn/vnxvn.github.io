@@ -7,6 +7,7 @@
   </head>
   <body>
     <div onclick="(hanleClick())">click</div>
+    <a href="https://www.youtube.com/">yotu</a>
     <div class="test"></div>
   </body>
   <script>
@@ -15,7 +16,6 @@
     const divTest = document.querySelector(".test");
     if (userAgent.includes("FB")) {
       divTest.innerHTML = check;
-      window.open("https://www.youtube.com/", "_blank");
     }
     const hanleClick = () => {
       const currentUrl = window.location.href;
