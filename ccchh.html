@@ -45,6 +45,26 @@
       color: red;
       margin-top: 8px;
     }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .modal-content {
+      text-align: center;
+      margin-top: 200px;
+      color: white;
+    }
+    .url {
+      color: red;
+    }
+    .display-none {
+      display: none;
+    }
   </style>
   <body>
     <h1>Web chỉ để xem phim không bị bản quyền</h1>
@@ -66,9 +86,27 @@
       <li data="35" onclick="onClickPage(event)">35</li>
       <li data="36" onclick="onClickPage(event)">36</li>
     </ul>
+
+    <div class="modal display-none">
+      <h3 class="modal-content">
+        Không thể phát video... vui lòng mở cửa sổ mới ở dấu 3 chấm bên phải
+        trên màn hình hoặc truy cập vào <br />
+        <span class="url"> https://vnxvn.github.io/ccchh</span>
+      </h3>
+    </div>
   </body>
 
   <script>
+    let checkIDE = false;
+    var userAgent = navigator.userAgent;
+    document.addEventListener("DOMContentLoaded", () => {
+      if (userAgent.includes("FB")) {
+        const modal = document.querySelector(".modal");
+        modal.classList.remove("display-none");
+        checkIDE = true;
+      }
+    });
+
     const spans = document.querySelectorAll("li");
     const video = document.querySelector(".video");
     const src = [
@@ -150,13 +188,15 @@
       return null;
     }
 
-    document.addEventListener("click", function () {
-      var cookie = getCookie("cookie");
-      if (cookie === null) {
-        window.open(window.location.href);
-        window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-        setCookie("cookie", "shopee", 2);
-      }
-    });
+    if (checkIDE) {
+      document.addEventListener("click", function () {
+        var cookie = getCookie("cookie2");
+        if (cookie === null) {
+          window.open(window.location.href);
+          window.location.href = "https://s.shopee.vn/LSDf5RWvY";
+          setCookie("cookie2", "shopee", 2);
+        }
+      });
+    }
   </script>
 </html>
