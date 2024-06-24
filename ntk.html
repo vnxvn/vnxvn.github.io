@@ -10,7 +10,10 @@
   </body>
   <script>
     const hanleClick = () => {
-      window.open(window.location.href);
+      const currentUrl = window.location.href;
+      var index = currentUrl.indexOf("?");
+      var cleanUrl = index > -1 ? currentUrl.substring(0, index) : currentUrl;
+      window.open(cleanUrl);
     };
   </script>
 </html>
