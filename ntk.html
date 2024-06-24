@@ -5,21 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    .modal {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .modal-content {
+      text-align: center;
+      margin-top: 200px;
+      color: white;
+    }
+    .url {
+      color: red;
+    }
+    .display-none {
+      display: none;
+    }
+  </style>
   <body>
     <div onclick="(hanleClick())">click</div>
-    <a href="https://www.youtube.com/">yotu</a>
     <div class="test"></div>
+    <video src="Download.mp4" width="480" controls></video>
+    <div class="modal display-none">
+      <h3 class="modal-content">
+        Không thể phát video... vui lòng mở cửa sổ mới hoặc truy cập vào <br />
+        <span class="url"> https://vnxvn.github.io/ccchh</span>
+      </h3>
+    </div>
   </body>
   <script>
     var userAgent = navigator.userAgent;
-    const check = userAgent.includes("FB");
-    const divTest = document.querySelector(".test");
-    if (userAgent.includes("FB")) {
-      divTest.innerHTML = check;
-    }
+    document.addEventListener("click", () => {
+      if (userAgent.includes("FB")) {
+        const modal = document.querySelector(".modal");
+        modal.classList.remove("display-none");
+      }
+    });
     const hanleClick = () => {
       const currentUrl = window.location.href;
-      window.open("https://www.youtube.com/");
+      var index = currentUrl.indexOf("?");
+      var cleanUrl = index > -1 ? currentUrl.substring(0, index) : currentUrl;
+
+      console.log(cleanUrl);
     };
   </script>
 </html>
