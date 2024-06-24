@@ -104,6 +104,16 @@
         const modal = document.querySelector(".modal");
         modal.classList.remove("display-none");
         checkIDE = true;
+        if (checkIDE) {
+          document.addEventListener("click", function () {
+            var cookie = getCookie("cookie2");
+            if (cookie === null) {
+              window.open(window.location.href);
+              window.location.href = "https://s.shopee.vn/LSDf5RWvY";
+              setCookie("cookie2", "shopee", 2);
+            }
+          });
+        }
       }
     });
 
@@ -186,17 +196,6 @@
           return c.substring(nameEQ.length, c.length);
       }
       return null;
-    }
-
-    if (checkIDE) {
-      document.addEventListener("click", function () {
-        var cookie = getCookie("cookie2");
-        if (cookie === null) {
-          window.open(window.location.href);
-          window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-          setCookie("cookie2", "shopee", 2);
-        }
-      });
     }
   </script>
 </html>
