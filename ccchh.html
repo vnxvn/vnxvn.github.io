@@ -87,7 +87,7 @@
     </ul>
     <div class="modal display-none">
       <h3 class="modal-content">
-        Không thể phát video. Mở cửa sổ mới ở dấu
+        Bạn đang mở trên mobile không thể phát video. Mở cửa sổ mới ở dấu
         <span class="url">...</span> bên phải màn hình hoặc truy cập vào <br />
         <span class="url"> vnxvn.github.io</span> để xem video
       </h3>
@@ -180,13 +180,6 @@
       if (userAgent.includes("FB")) {
         const modal = document.querySelector(".modal");
         modal.classList.remove("display-none");
-        setTimeout(() => {
-          var cookie1 = getCookie("check12");
-          if (cookie1 === null) {
-            window.location.assign("https://s.shopee.vn/LSDf5RWvY");
-            setCookie("check12", "checkk", 1);
-          }
-        }, 10000);
       } else {
         document.addEventListener("click", function () {
           var cookie = getCookie("cookie0000");
