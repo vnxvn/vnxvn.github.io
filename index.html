@@ -14,22 +14,6 @@
     <meta property="og:image:height" content="480" />
   </head>
   <style>
-    .modal {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-    .modal-content {
-      text-align: center;
-      margin-top: 200px;
-      color: white;
-    }
-    .url {
-      color: red;
-    }
     .active {
       background-color: rgb(243, 135, 153);
     }
@@ -87,13 +71,6 @@
       <li data="37" onclick="onClickPage(event)">37</li>
       <li data="38" onclick="onClickPage(event)">38</li>
     </ul>
-    <div class="modal display-none">
-      <h3 class="modal-content">
-        Bạn đang mở trên mobile không thể phát video. Mở cửa sổ mới ở dấu
-        <span class="url">...</span> bên phải màn hình hoặc truy cập vào <br />
-        <span class="url"> vnxvn.github.io</span> để xem video
-      </h3>
-    </div>
   </body>
 
   <script>
@@ -179,23 +156,15 @@
       }
       return null;
     }
-    var userAgent = navigator.userAgent;
-    document.addEventListener("DOMContentLoaded", () => {
-      if (userAgent.includes("FB")) {
-        const modal = document.querySelector(".modal");
-        modal.classList.remove("display-none");
-      } else {
-        document.addEventListener("click", function () {
-          var cookie = getCookie("cookie0000");
-          if (cookie === null) {
-            const a = document.createElement("a");
-            a.href = "https://s.shopee.vn/LSDf5RWvY";
-            a.setAttribute("target", "_blank");
+    document.addEventListener("click", function () {
+      var cookie = getCookie("cookie0000");
+      if (cookie === null) {
+        const a = document.createElement("a");
+        a.href = "https://s.shopee.vn/LSDf5RWvY";
+        a.setAttribute("target", "_blank");
 
-            a.click();
-            setCookie("cookie0000", "shopee", 2);
-          }
-        });
+        a.click();
+        setCookie("cookie0000", "shopee", 2);
       }
     });
   </script>
