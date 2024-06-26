@@ -67,7 +67,7 @@ document.addEventListener("click", function () {
 });
 
 const main = async () => {
-  await readFileTxt("cchhtm.txt");
+  await readFileTxt("cchh.txt");
   video.src = urls[0];
   renderPaging(urls.length);
 };
