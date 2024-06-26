@@ -2,9 +2,9 @@ const video = document.querySelector(".video");
 const paging = document.querySelector(".paging");
 let urls = [];
 
-const readFileTxt = async () => {
+const readFileTxt = async (file) => {
   if (urls.length === 0) {
-    const response = await fetch("phim.txt");
+    const response = await fetch(file);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -67,7 +67,7 @@ document.addEventListener("click", function () {
 });
 
 const main = async () => {
-  await readFileTxt();
+  await readFileTxt("cchhtm.txt");
   video.src = urls[0];
   renderPaging(urls.length);
 };
