@@ -15,6 +15,7 @@ const readFileTxt = async (file) => {
       .map((line) => line.trim())
       .filter((line) => line.length > 0);
   }
+  console.log(urls);
   return urls;
 };
 
@@ -68,6 +69,7 @@ document.addEventListener("click", function () {
 
 const main = async () => {
   await readFileTxt("cchh.txt");
+
   video.src = urls[0];
   renderPaging(urls.length);
 };
