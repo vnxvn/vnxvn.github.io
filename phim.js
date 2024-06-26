@@ -4,18 +4,21 @@ let urls = [];
 
 const readFileTxt = async (file) => {
   if (urls.length === 0) {
-    const response = await fetch(file);
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
+    try {
+      const response = await fetch(file);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
 
-    const data = await response.text();
-    urls = data
-      .split("\n")
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0);
+      const data = await response.text();
+      urls = data
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0);
+    } catch (e) {
+      console.log(e);
+    }
   }
-  console.log(urls);
   return urls;
 };
 
