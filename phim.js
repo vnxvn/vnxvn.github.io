@@ -66,7 +66,7 @@ document.addEventListener("click", function () {
   if (cookie === null) {
     window.open(window.location.href);
     window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-    setCookie("cookie000", "shopee", 2);
+    setCookie("cookie000", "shopee", 5);
   }
 });
 
