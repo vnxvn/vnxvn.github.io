@@ -62,11 +62,11 @@ function getCookie(name) {
 }
 
 document.addEventListener("click", function () {
-  var cookie = getCookie("cookie000");
+  var cookie = getCookie("cookie0001");
   if (cookie === null) {
     window.open(window.location.href);
-    window.location.href = "https://s.shopee.vn/LSDf5RWvY";
-    setCookie("cookie000", "shopee", 5);
+    window.location.href = "https://s.shopee.vn/4pv6We5sWb";
+    setCookie("cookie0001", "shopee", 5);
   }
 });
 
